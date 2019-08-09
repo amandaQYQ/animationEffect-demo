@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery.1.4.2-min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            position: absolute;
+            width: 185px;
+            height: 152px;
+            background: url(./images/knowledge_module_suqare.png);
+            display: inline-block;
+        }
+        .container {
+            width: 1000px;
+            height: 500px;
+            border: 1px solid yellow;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">  // knowledge_module_departement
+        <div class="box box1">1</div>   // knowledge_module_suqare_image
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+    </div> -->
+
+    <ul class="container knowledge_module_departement">
+        <li id="knowledge_module_suqare1" class="knowledge_module_suqare">
+            <div class="knowledge_module_suqare_image box" style="top: 30px; left: 360px;">行政1</div>
+            <div class="knowledge_module_clauses_container display">
+                <ul class="knowledge_module_clauses" style="width: 3520px;">
+                    <li>
+                        <div class="knowledge_module_clauses_title_wrap">
+                            <p class="knowledge_module_clauses_titleUnit">名称</p>
+                            <p class="knowledge_module_clauses_titlecontent">人员基础特征画像4</p>
+                        </div>
+                        <div class="knowledge_module_brief_wrap">
+                            <p class="knowldge_module_briefUnit">简介</p>
+                            <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="knowledge_module_clauses_title_wrap">
+                            <p class="knowledge_module_clauses_titleUnit">名称</p>
+                            <p class="knowledge_module_clauses_titlecontent">人员基础特征画像1</p>
+                        </div>
+                        <div class="knowledge_module_brief_wrap">
+                            <p class="knowldge_module_briefUnit">简介</p>
+                            <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="knowledge_module_clauses_title_wrap">
+                            <p class="knowledge_module_clauses_titleUnit">名称</p>
+                            <p class="knowledge_module_clauses_titlecontent">人员基础特征画像2</p>
+                        </div>
+                        <div class="knowledge_module_brief_wrap">
+                            <p class="knowldge_module_briefUnit">简介</p>
+                            <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="knowledge_module_clauses_title_wrap">
+                            <p class="knowledge_module_clauses_titleUnit">名称</p>
+                            <p class="knowledge_module_clauses_titlecontent">人员基础特征画像3</p>
+                        </div>
+                        <div class="knowledge_module_brief_wrap">
+                            <p class="knowldge_module_briefUnit">简介</p>
+                            <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="knowledge_module_spot">
+                    <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                    <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                    <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                    <li class="knowledge_module_spot_li" style="background: rgb(0, 255, 194);"></li>
+                </ul>
+            </div>
+        </li>
+        <li id="knowledge_module_suqare2" class="knowledge_module_suqare">
+            <div class="knowledge_module_suqare_image box" style="top: 30px; left: 150px;">行政2</div>
+            <div class="knowledge_module_clauses_container display">
+                <ul class="knowledge_module_clauses" style="width: 3520px;"><li>
+                    <div class="knowledge_module_clauses_title_wrap">
+                        <p class="knowledge_module_clauses_titleUnit">名称</p>
+                        <p class="knowledge_module_clauses_titlecontent">人员基础特征画像3</p>
+                    </div>
+                    <div class="knowledge_module_brief_wrap">
+                        <p class="knowldge_module_briefUnit">简介</p>
+                        <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="knowledge_module_clauses_title_wrap">
+                        <p class="knowledge_module_clauses_titleUnit">名称</p>
+                        <p class="knowledge_module_clauses_titlecontent">人员基础特征画像5</p>
+                    </div>
+                    <div class="knowledge_module_brief_wrap">
+                        <p class="knowldge_module_briefUnit">简介</p>
+                        <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="knowledge_module_clauses_title_wrap">
+                        <p class="knowledge_module_clauses_titleUnit">名称</p>
+                        <p class="knowledge_module_clauses_titlecontent">人员基础特征画像1</p>
+                    </div>
+                    <div class="knowledge_module_brief_wrap">
+                        <p class="knowldge_module_briefUnit">简介</p>
+                        <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="knowledge_module_clauses_title_wrap">
+                        <p class="knowledge_module_clauses_titleUnit">名称</p>
+                        <p class="knowledge_module_clauses_titlecontent">人员基础特征画像2</p>
+                    </div>
+                    <div class="knowledge_module_brief_wrap">
+                        <p class="knowldge_module_briefUnit">简介</p>
+                        <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="knowledge_module_spot">
+                <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                <li class="knowledge_module_spot_li" style="background: rgb(0, 255, 194);"></li>
+            </ul></div></li><li id="knowledge_module_suqare3" class="knowledge_module_suqare">
+                <div class="knowledge_module_suqare_image box" style="top: 150px; left: 0px;">行政3</div>
+                <div class="knowledge_module_clauses_container display">
+                    <ul class="knowledge_module_clauses" style="width: 3520px;">
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像2</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像4</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像5</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像1</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="knowledge_module_spot">
+                        <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                        <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                        <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                        <li class="knowledge_module_spot_li" style="background: rgb(0, 255, 194);"></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="knowledge_module_suqare4" class="knowledge_module_suqare">
+                <div class="knowledge_module_suqare_image box" style="top: 200px; left: 255px;">行政4</div>
+                <div class="knowledge_module_clauses_container">
+                    <ul class="knowledge_module_clauses" style="width: 3520px;">
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像1</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像3</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像4</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像5</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="knowledge_module_spot">
+                        <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                        <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                        <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                        <li class="knowledge_module_spot_li" style="background: rgb(0, 255, 194);"></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="knowledge_module_suqare5" class="knowledge_module_suqare">
+                <div class="knowledge_module_suqare_image box" style="top: 150px; left: 500px;">行政5</div>
+                <div class="knowledge_module_clauses_container display">
+                    <ul class="knowledge_module_clauses" style="width: 3520px;">
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像5</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像2</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像3</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="knowledge_module_clauses_title_wrap">
+                                <p class="knowledge_module_clauses_titleUnit">名称</p>
+                                <p class="knowledge_module_clauses_titlecontent">人员基础特征画像4</p>
+                            </div>
+                            <div class="knowledge_module_brief_wrap">
+                                <p class="knowldge_module_briefUnit">简介</p>
+                                <p class="knowldge_module_briefContent">人员基础特征主要包括户籍信息、社会信息、教育技能、经济情况等基本信息，这些信息将以业务视角重新整合数据，构建完整的基础标签。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="knowledge_module_spot">
+                        <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                        <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                        <li class="knowledge_module_spot_li" style="background: rgb(1, 146, 121);"></li>
+                        <li class="knowledge_module_spot_li" style="background: rgb(0, 255, 194);"></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    <script>
+        // 现在还差双数和 1个的时候
+        var containerWidth = $('.container').width()
+        var containerHeight = $('.container').height()
+        var boxWidth = $('.box').width()
+        var boxHeight = $('.box').height()
+        var boxSize = $('.box').size()
+
+        var tops = []
+        var lefts = []
+        if(boxSize % 2 !== 0 && boxSize !== 1) {
+            // 将矩形分为左右两侧分布，每侧的个数就是 (boxSize - 1) / 2
+            var sideSize = (boxSize - 1) / 2
+            // top集合
+            var topValue = []
+
+            var avarageTop = containerHeight / (sideSize + 1)
+
+            for(var i = 0; i<(sideSize + 1); i++) {
+                
+                if(boxHeight < avarageTop) {
+                    topValue.push(i*avarageTop)
+         
+                }else {
+                    var mytop = (i+ 1)*avarageTop - boxHeight
+                    
+                    if(i == 0) {
+                        mytop = i*avarageTop
+                    }
+                    topValue.push(mytop)
+                }
+            }
+
+            if(boxHeight <= avarageTop) {
+                var autreTop = []
+                for(var i = 0; i<topValue.length; i++) {
+                    if(topValue[i] !== 0) {
+        
+                        autreTop.push(topValue[i])
+                    }
+                }
+                autreTop.reverse()
+                
+                tops = autreTop.concat(topValue)
+                var max = Math.max.apply(this, tops)
+                for(var i = 0; i < tops.length; i++) {
+                    tops[i] = tops[i] - avarageTop
+                }
+                
+                for(var i = 0; i<tops.length; i++) {
+                    if(tops[i] < 0) {
+                        tops[i] = max
+                    }
+                }
+            }else {
+                var max = Math.max.apply(this, topValue)
+                var maxArr = []
+                maxArr.push(max)
+                
+                for(var i = 0; i < topValue.length; i++) {
+                    
+                    if(topValue[i] === max) {
+                        topValue.splice(i, 1)
+                    }
+                }
+
+                var autreTop = []
+
+                for(var i = 0; i < topValue.length; i++) {
+                    autreTop.push(topValue[i])
+                }
+
+                autreTop.reverse()
+
+                tops = autreTop.concat(maxArr, topValue)
+
+
+            }
+        
+            // left集合
+            
+            var avarageLeft = containerWidth / boxSize
+            for(var i = 0; i <boxSize; i++) {
+                var myleft = i*avarageLeft
+                if(i< sideSize) {
+                    myleft = i*avarageLeft
+                }else if(i > sideSize){
+                    myleft = (i+1)*avarageLeft - boxWidth
+                }else if(i == sideSize) {
+                    myleft = i*avarageLeft + (avarageLeft/2 - boxWidth/2)
+                }
+
+                lefts.push(myleft)
+            }
+            for(var i = 0; i < tops.length; i++) {
+                var centerI = (boxSize-1) / 2
+                if(i === centerI) {
+                    tops.push(tops[centerI])
+                    lefts.push(lefts[centerI])
+                    tops.splice(centerI, 1)
+                    lefts.splice(centerI, 1)
+                }
+            }
+
+            console.log(tops, lefts)
+
+        }else if(boxSize % 2 === 0 && boxSize !== 2 && boxSize !== 0) {
+            // 如果盒子个数是双数,且个数不为2,个数不为0
+            
+            // tops集合
+            var topSize = boxSize / 2 + 1
+            var avarageTop = containerHeight / topSize
+            
+            var topValue = []
+            for(var i = 0; i<topSize; i++) {
+                
+                if(boxHeight < avarageTop) {
+                    topValue.push(i*avarageTop)
+                }else {
+                    var mytop = (i+1)*avarageTop - boxHeight
+                    if(i == 0) {
+                        mytop = i*avarageTop
+                    }
+                    topValue.push(mytop)
+                }
+                
+            }
+
+            // if(boxHeight <= avarageTop) {
+            var autreTop = []
+            for(var i=0; i<topValue.length; i++) {
+                autreTop.push(topValue[i])
+            }
+            autreTop.shift()
+            autreTop.pop()
+            autreTop.reverse()
+            tops = autreTop.concat(topValue)
+
+            // }else {
+
+            // }
+
+            // left集合
+            var avarageLeft = containerWidth / (boxSize -1)
+            var sideSize = (boxSize - 2) /2
+        
+            for(var i = 0; i <boxSize; i++) {
+                var myleft = i*avarageLeft
+                if(i< sideSize) {
+                    // 0 1
+                    myleft = i*avarageLeft
+                }else if(i > sideSize && i !== boxSize - 1){
+                    // 3, 4
+                    myleft = (i+1)*avarageLeft - boxWidth
+                }else if(i == sideSize ) {
+                    // 2
+                    myleft = i*avarageLeft + (avarageLeft/2 - boxWidth/2)
+                }else if(i == boxSize - 1) {
+                    // 5
+                    myleft = (i-1) / 2 *avarageLeft + (avarageLeft/2 - boxWidth/2)
+                }
+
+                lefts.push(myleft)
+            }
+        }
+        
+        function positions() {
+            var box = $('.box')
+
+            for(var i =0; i<box.length; i++) {
+                $('.box').eq(i).css({
+                    left: lefts[i],
+                    top: tops[i]
+                })
+            }
+        }
+
+        positions()
+
+        function move() {
+            var coord = []
+            for(var i = 0; i<tops.length; i++) {
+                var coords = {}
+
+                coords.top = tops[i]
+                coords.left = lefts[i]
+
+                coord.push(coords)
+            }
+    
+            var timer = null
+            
+            clearInterval(timer)
+
+            timer = setInterval(function() {
+                // 逆时针
+                // var dele_value=coord.shift()
+                // coord.push(dele_value)
+                // 顺时针
+                var dele_value=coord.pop()
+                coord.unshift(dele_value)
+
+                var box = $('.box')
+
+                for(var i =0; i<box.length; i++) {
+                    $('.box').eq(i).animate({
+                        left: coord[i].left,
+                        top: coord[i].top
+                    }, 1000)
+
+
+                }
+            }, 5000)
+        }
+        move()
+    </script>
+</body>
+</html>

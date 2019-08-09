@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery实现无缝图片滚动效果-jq22.com</title>
+<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+<style>
+*{
+	padding: 0;
+	margin: 0;
+}
+
+li{
+	list-style-type: none;
+        margin-top: 40px;
+}
+
+body{
+	margin: 20px;
+}
+
+.wrap{
+	border: 3px solid #f00;
+	width: 600px;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+.wrap ul{
+	overflow: hidden;
+	position:absolute;
+	width: 1600px;
+	left: 0;
+	top: 0;
+	_height:1px;
+}
+
+.wrap ul li{
+	float: left;
+	width: 200px;
+}</style>
+</head>
+<body>
+<a href="javascript:;" class="goLeft">向左走</a> <a href="javascript:;" class="goRight">向右走</a>
+<div class="wrap">
+  <ul>
+    <li><img src="http://www.jq22.com/img/cs/500x300.png" alt="" style="width:90%;"></li>
+    <li><img src="http://www.jq22.com/img/cs/500x300.png" alt="" style="width:90%;"></li>
+    <li><img src="http://www.jq22.com/img/cs/500x300.png" alt="" style="width:90%;"></li>
+    <li><img src="http://www.jq22.com/img/cs/500x300.png" alt="" style="width:90%;"></li>
+    <li><img src="http://www.jq22.com/img/cs/500x300.png" alt="" style="width:90%;"></li>
+  </ul>
+</div> 
+
+<script>
+// 如果想要使一个元素运动起来，一般情况下这个元素须要具有position属性absolute/relative
+$(function(){
+	var oul = $('.wrap ul');
+	var oulHtml = oul.html();
+	oul.html(oulHtml+oulHtml)
+	var timeId = null;
+
+	var ali = $('.wrap ul li');
+	var aliWidth = ali.eq(0).width();
+	var aliSize = ali.size();
+	var ulWidth = aliWidth*aliSize;
+	oul.width(ulWidth);	//1600px
+	
+	var speed = 2;
+
+	function slider(){
+
+		if(speed<0){
+			if(oul.css('left')==-ulWidth/2+'px'){
+	 		oul.css('left',0);
+		 	}
+		 	oul.css('left','+=-2px');
+		}
+
+	 	
+		if(speed>0){
+			if(oul.css('left')=='0px'){
+	 		oul.css('left',-ulWidth/2+'px');
+		 	}
+		 	oul.css('left','+='+speed+'px');
+		}
+	 	
+	 }
+	
+	// setInterval()函数的作用是：每隔一段时间，执行该函数里的代码
+	 timeId = setInterval(slider,30);
+
+	$('.wrap').mouseover(function(){
+		// clearInterval()函数的作用是用来清除定时器
+		clearInterval(timeId);
+	});
+
+	$('.wrap').mouseout(function(){
+		timeId = setInterval(slider,30);
+	});
+
+	$('.goLeft').click(function(){
+		speed=-2;
+	});
+
+	$('.goRight').click(function(){
+		speed=2;
+	});
+
+});
+</script>
+
+</body>
+</html>

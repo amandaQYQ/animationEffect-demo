@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 3D图片相册特效</title>
+
+    <link rel='stylesheet' href='css/style.css' type='text/css' />
+
+    <script type='text/javascript' src='js/jquery.min.js'></script>
+
+</head>
+
+<body>
+
+
+    <div style="height:100px;"></div>
+
+    <div class="warper">
+        <div id="wowslider-container1">
+            <div class="ws_images">
+                <ul class="ws_images_ul">
+                    <!-- <li><a target="_blank" href="#"><img title="高级职位都在这里" src="images/bimg1.jpg" /></a></li>
+		  <li><a target="_blank" href="#"><img title="互联网设计布道者冯铁看诊把脉" src="images/bimg2.jpg" /></a></li>
+		  <li><a target="_blank" href="#"><img title="颜值不高别装“表”" src="images/bimg3.jpg" /></a></li>
+		  <li><a target="_blank" href="#"><img title="高级职位都在这里" src="images/bimg1.jpg" /></a></li>
+		  <li><a target="_blank" href="#"><img title="互联网设计布道者冯铁看诊把脉" src="images/bimg2.jpg" /></a></li>
+		  <li><a target="_blank" href="#"><img title="颜值不高别装“表”" src="images/bimg3.jpg" /></a></li> -->
+                </ul>
+            </div>
+            <div class="ws_thumbs">
+                <div class="ws_thumbs_div">
+                    <!-- <a target="_blank" href="#"><img src="images/simg1.jpg" /></a>
+		<a target="_blank" href="#"><img src="images/simg2.jpg" /></a>
+		<a target="_blank" href="#"><img src="images/simg3.jpg" /></a>
+		<a target="_blank" href="#"><img src="images/simg1.jpg" /></a>
+		<a target="_blank" href="#"><img src="images/simg2.jpg" /></a>
+		<a target="_blank" href="#"><img src="images/simg3.jpg" /></a> -->
+                </div>
+            </div>
+            <div class="ws_shadow"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript">
+        var data = [
+            {
+                url: './images/bimg1.jpg'
+            },
+            {
+                url: './images/bimg1.jpg'
+            },
+            {
+                url: './images/bimg1.jpg'
+            },
+            {
+                url: './images/bimg1.jpg'
+            },
+            {
+                url: './images/bimg1.jpg'
+            },
+            {
+                url: './images/bimg1.jpg'
+            }
+        ]
+
+        var wrap = $('.ws_images_ul');
+        var centerWrap = $('.ws_thumbs_div');
+        wrap.html('');
+        centerWrap.html('');
+        var tempLis = '';
+        var centerLis = '';
+        $.each(data, function (i, d) {
+            var tempLi = '<li><a target="_blank" href="#"><img src="' + d.url + '" /></a></li>'
+            tempLis += tempLi;
+
+            var centerLi = '<a target="_blank" href="#"><img src="' + d.url + '" /></a>'
+            centerLis += centerLi;
+        })
+        wrap.html(tempLis);
+        centerWrap.html(centerLis);
+        $(function () {
+
+
+            jQuery("#wowslider-container1").wowSlider({ effect: "cube", prev: "", next: "", duration: 20 * 100, delay: 20 * 100, width: 716, height: 297, autoPlay: true, playPause: true, stopOnHover: false, loop: false, bullets: 0, caption: true, captionEffect: "slide", controls: true, onBeforeStep: 0, images: 0 });
+        })
+    </script>
+
+
+    </div>
+</body>
+
+</html>

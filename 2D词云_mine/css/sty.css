@@ -1,0 +1,33 @@
+* {
+	margin: 0px;
+	margin: 0px;
+}
+#tagcloud_2D_wrap {
+	position: relative;
+	width: 1404px;
+	height: 485px;
+	margin: 146px auto 0;
+	background-image: url('../images/tagcloud_2D_bac.png');
+	background-color: #06091c;
+	overflow: hidden;
+}
+#tagcloud_2D_wrap a {
+	position: absolute;
+	color: #fff;
+	top: 260px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-size: 14px;
+	padding: 10px;
+	font-family: arial;
+}
+#tagcloud_2D_wrap a:hover {
+ 	filter: alpha(opacity: 100);
+	opacity: 1;
+	font-weight: bold;
+	font-size: 16px;
+}
